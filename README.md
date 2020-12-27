@@ -11,6 +11,9 @@ An API with JWT to which can be used as a plugin for other projects.
 - JOI (For Validation)
 - JWT (JSON Web Tokens)
 
+## Database
+- MongoDB (Atlas basically online version of MongoDB)
+
 ## Installation
 
 ```bash
