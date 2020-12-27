@@ -5,7 +5,7 @@ An API with JWT to which can be used as a plugin for other projects.
 ## Tech Used
 
 - Node.js
-- ExpressJS
+- Express.js
 
 ## External Libraries
 - JOI (For Validation)
