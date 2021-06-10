@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/style.css')
+    title Node.js API
+  body
+    .container
+      .inputs-container
+        h1 Node.js API for User Registration and fetching
+        .input
+          input#lang_data(type='text' required='')
+          label.label Type Here
+          button.btn.submit(type='submit' onclick='showEndpoints()')
+            | Click here to know the end points
+          .result
+    script(src="/script.js")

@@ -2,16 +2,37 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const pug = require('pug');
+const path = require('path');
 
 dotenv.config();
 
 //Connect DB
-mongoose.connect( process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true },
-() => console.log('Connected to DB!') );
+mongoose.connect(
+	process.env.DB_CONNECT,
+	{ useNewUrlParser: true, useUnifiedTopology: true },
+	() => console.log('Connected to DB!')
+);
+
+// Set public path
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Set view engine as pug
+app.set('view engine', 'pug');
+
+// Home Route
+app.get('/', (req, res) => {
+	res.render('index', { title: 'Hey', message: 'Hello there!' });
+});
+
+app.get('/register', (req, res) => {
+	res.render('register', { title: 'Hey', message: 'Hello there!' });
+});
 
 //Import Routes
 const router = require('./routes/auth');
 const proute = require('./routes/post');
+
 //Middleware
 app.use(express.json());
 
