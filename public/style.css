@@ -6,7 +6,7 @@ body, html {
   .container .inputs-container .input .label, btn, .result, .container .inputs-container .input input:focus, .container .inputs-container .input input:valid {
     font-family: "Montserrat", sans-serif;
   }
-  h1{
+  h1, li{
     font-family: "Montserrat", sans-serif;
     color: white;
   }

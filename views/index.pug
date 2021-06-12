@@ -10,10 +10,8 @@ html(lang='en')
     .container
       .inputs-container
         h1 Node.js API for User Registration and fetching
-        .input
-          input#lang_data(type='text' required='')
-          label.label Type Here
-          button.btn.submit(type='submit' onclick='showEndpoints()')
-            | Click here to know the end points
-          .result
+        ul 
+        li POST /api/user/login
+        li /POST api/user/register
+
     script(src="/script.js")
